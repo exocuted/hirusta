@@ -1,0 +1,143 @@
+
+
+* {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.002em;
+}
+body {
+    background: #eee;
+}
+#particles {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-top: -15vh;
+
+  }
+/*
+main {
+    background-image: url('../img/hypnotize.png');
+    background-repeat: repeat;
+    min-height: 100vh;
+    padding-top: 15vh;
+    -webkit-animation: backgroundScroll 15s linear infinite;
+    animation: backgroundScroll 15s linear infinite;
+}
+*/
+.home-container {
+    background: #fff;
+    border: 1px solid #dedede;
+    margin: 15vh auto;
+    padding-bottom: 50px;
+}
+.logo-wrapper {
+
+}
+.logo {
+    padding: 30px;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+}
+.home-description-container {
+    text-align: center;
+    font-size: 1.3em;
+    padding: 30px 0;
+}
+.title-center {
+    text-align: center;
+    margin: 30px 0;
+}
+.services-container {
+    padding: 0 30px;
+}
+.services * {
+    text-align: right;
+}
+
+.services .column {
+    margin-top: 30px;
+}
+
+.column img {
+    max-width: 100%;
+}
+
+.logos img {
+    padding: 60px;
+}
+
+.tools-container {
+    text-align: right;
+    padding: 0px 10px;
+}
+
+.tool {
+    padding: 10px;
+    border-right: 1px dashed #ddd;
+    border-top: 1px dashed #ddd;
+}
+
+.projects .column {
+    padding: 25px 35px;
+}
+
+hr {
+    height: 6px;
+    background: url('../img/hr.png');;
+    border: 0;
+    margin: 30px 0;
+}
+#map-wrapper {
+    padding: 20px;
+    
+}
+#map-home {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+    border-radius: 50%;
+   }
+
+.contact input, .contact textarea {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    background: #fff;
+    border-radius: 0px;
+    border: 1px dashed #aaa;
+    padding: 5px 5px;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border: 1px dashed #5755d9;
+    transform: scale(1.03);
+    outline: none;
+}
+
+.contact form {
+    margin-top: 20px;
+}
+
+.contact button {
+    background: #fff;
+    border: 1px solid #5755d9;
+    color: #5755d9;
+    text-align: center;
+    padding: 5px 8px;
+    display: block;
+    margin: 10px auto;
+}
+
+@media only screen and (max-device-width: 500px) {
+    main {
+        margin: 15vh 10px;
+    }
+    .column {
+        width: 100% !important;
+    }
+}
