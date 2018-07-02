@@ -103,7 +103,9 @@ hr {
     border-radius: 50%;
    }
 
-.contact input, .contact textarea {
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
     width: 100%;
     display: block;
     margin: 10px 0;
@@ -113,10 +115,76 @@ hr {
     padding: 5px 5px;
 }
 
-.contact input:focus, .contact textarea:focus {
+.contact input[type="text"]:focus, 
+.contact input[type="email"]:focus, 
+.contact textarea:focus {
     border: 1px dashed #5755d9;
     transform: scale(1.03);
     outline: none;
+}
+
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+}
+
+.checkbox label {
+    position: relative;
+    display: inline-block;
+    
+    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+    padding-left: 22px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+    content: "";
+    
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox label::before{
+    height: 16px;
+    width: 16px;
+    
+    border: 1px solid;
+    left: 0px;
+    
+    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+    top: 3px;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox label::after {
+    height: 5px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #5755d9;
+    
+    transform: rotate(-45deg);
+    
+    left: 4px;
+    top: 7px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
 }
 
 .contact form {
@@ -128,10 +196,41 @@ hr {
     border: 1px solid #5755d9;
     color: #5755d9;
     text-align: center;
-    padding: 5px 8px;
+    padding: 8px 12px;
     display: block;
-    margin: 10px auto;
+    margin: 30px auto;
+    cursor: pointer;
 }
+
+.contact button:hover,
+.contact button:active {
+    background: #5755d9;
+    color: #fff;
+}
+
+.thanks-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.thanks {
+    max-width: 80%;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.thanks h1 {
+
+    font-size: 1.7em;
+}
+
 
 @media only screen and (max-device-width: 500px) {
     main {

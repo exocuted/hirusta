@@ -1,12 +1,13 @@
 
 </body>
-<script src="css/particles.js">
+<script src="{{ '/css/particles.js' | relative_url }}">
 
 </script>
 <script>
-    particlesJS.load('particles', 'css/particles.json', function() {
+    particlesJS.load('particles', '{{ '/css/particles.json' | relative_url }}', function() {
     console.log('callback - particles.js config loaded');
     });
 
 </script>
+
 </html>
